@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>قالب فرم</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="speaker-form-header">
+    <h1>فرم ساده</h1>
+    <p>بیایید با هم این فرم را تکمیل کنیم!</p>
+  </header>
+  <form class="speaker-form" action="" method="get">
+    <div class="form-row">
+      <label for="full-name">نام</label>
+      <input type="text" name="full-name" id="full-name" placeholder="مثلا: الیاس حصاری"
+        pattern="^.* .*$" 
+        title="نام و نام خانوادگی خود را با یک فاصله از هم جدا کنید" 
+        required />
+    </div>
+    <div class="form-row">
+      <label for="password">رمز عبور</label>
+      <input type="text" name="password" id="password" placeholder=" مثلا: EH563535@54"
+      pattern="[A-Za-z]{3}"
+      title="رمز عبور شامل حروف کوچک و بزرگ انگلیسی و حداقل 3 کاراکتر باشد"
+      required />
+    </div>
+    <div class='form-row'>
+      <label for='email'>ایمیل</label>
+      <input id='email' name='email' type='email' placeholder='مثلا: elyashesari@gmail.com' />
+    </div>
+    <div class="legacy-form-row">
+      <legend>جنسیت</legend>
+      <input type="radio" name="talk-type" id="talk-type-1" value="main-stage" />
+      <label for="talk-type-1" class="radio-label">آقا</label>
+      <input type="radio" name="talk-type" id="talk-type-2" value="workshop" checked />
+      <label for="talk-type-2" class="radio-label">خانم</label>
+    </div>
+    <div class='form-row'>
+      <label for='t-shirt'>تحصیلات</label>
+      <select id='t-shirt' name='t-shirt'>
+        <option value='xs'>دکترا</option>
+        <option value='s'>کارشناسی ارشد</option>
+        <option value='m'>کارشناسی</option>
+        <option value='l'>دیپلم</option>
+      </select>
+    </div>
+    <div class='form-row'>
+      <label for='abstract'>توضیحات</label>
+      <textarea id='abstract' name='abstract'></textarea>
+      <div class='instructions'>در مورد رزومه کاری خود 500 کاراکتر یا کمتر بنویسید.</div>
+    </div>
+    <div class='form-row'>
+      <label class='checkbox-label' for='available'>
+        <input id='available' name='available' type='checkbox' value='is-available' />
+        <span>تمامی قوانین مربوطه را می پذیریم.</span>
+      </label>
+    </div>
+
+
+    <div class='form-row'>
+      <label for="upload">
+        <span>اپلود تصویر</span>
+      </label>
+      <input type='file' id="upload" name="upload" accept="image/png, image/gif,
+        image/jpeg"/>
+    </div>
+
+
+    <div class='form-row'>
+      <button>ارسال</button>
+    </div>
+  </form>
+
+</body>
+
+</html>
